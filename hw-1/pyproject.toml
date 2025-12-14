@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "hw-1"
+version = "0.0.1"
+packages = [{include = "src"}]
+
+[tool.poetry.dependencies]
+python = ">=3.8"
+click = ">=8.0.0"
+
+[tool.poetry.scripts]
+hw-nl = "src.nl:nl"
+hw-tail = "src.tail:tail"
+hw-wc = "src.wc:wc"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
