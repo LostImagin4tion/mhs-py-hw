@@ -21,6 +21,8 @@ poetry run hw-nl test_files/sample1.txt
 
 2) Чтение из stdin
 
+Команда:
+
 ```bash
 poetry run hw-nl
 ```
