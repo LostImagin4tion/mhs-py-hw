@@ -1,0 +1,9 @@
+services:
+  latex-generator:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: mhs-latex-generator:latest
+    volumes:
+      - ./artifacts:/app/artifacts
+    container_name: hw2-latex-pdf-generator
