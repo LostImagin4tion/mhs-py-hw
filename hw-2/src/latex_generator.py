@@ -1,4 +1,3 @@
-
 from typing import Any, List, Optional
 
 
@@ -90,3 +89,45 @@ def wrap_in_document(content: str) -> str:
 {content}
 
 \\end{{document}}"""
+
+
+def generate_latex_image(
+    image_path: str,
+    caption: Optional[str] = None,
+    label: Optional[str] = None,
+    width: Optional[str] = None,
+    height: Optional[str] = None,
+    scale: Optional[float] = None,
+    center: bool = True
+) -> str:
+    options: List[str] = []
+    if width:
+        options.append(f'width={width}')
+    if height:
+        options.append(f'height={height}')
+    if scale is not None:
+        options.append(f'scale={scale}')
+    
+    options_str = f'[{",".join(options)}]' if options else ''
+    
+    includegraphics = f'\\includegraphics{options_str}{{{image_path}}}'
+    
+    if center:
+        includegraphics = f'\\centering\n{includegraphics}'
+    
+    if not caption and not label:
+        return includegraphics
+    
+    parts = ['\\begin{figure}[h!]']
+    parts.append(includegraphics)
+    
+    if caption:
+        parts.append(f'\\caption{{{escape_latex_string(caption)}}}')
+    
+    if label:
+        parts.append(f'\\label{{fig:{label}}}')
+    
+    parts.append('\\end{figure}')
+    
+    return '\n'.join(parts)
+

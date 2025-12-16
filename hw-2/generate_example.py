@@ -1,5 +1,5 @@
 
-from src.latex_table import generate_latex_table
+from src.latex_generator import generate_latex_table, generate_latex_image
 
 
 def main():
@@ -9,9 +9,28 @@ def main():
         ['Row 2 Data 1', 'Row 2 Data 2']
     ]
     
-    latex = generate_latex_table(data, with_document=True)
+    table = generate_latex_table(data)
+    image = generate_latex_image('includes/test-picture.png', 
+                                  caption='Test Picture', 
+                                  width='0.5\\textwidth')
     
-    path = 'artifacts/task_2_1.tex'
+    latex = f"""\\documentclass{{article}}
+\\usepackage[utf8]{{inputenc}}
+\\usepackage{{graphicx}}
+
+\\begin{{document}}
+
+\\section{{Table Example}}
+
+{table}
+
+\\section{{Image Example}}
+
+{image}
+
+\\end{{document}}"""
+    
+    path = 'artifacts/task_2_2.tex'
     with open(path, 'w', encoding='utf-8') as f:
         f.write(latex)
     
