@@ -1,13 +1,19 @@
 [tool.poetry]
 name = "hw-2"
 version = "0.0.1"
-packages = [{include = "src"}]
+package-mode = false
 
 [tool.poetry.dependencies]
 python = ">=3.8"
+mhs-latex-gen-danilov = "^0.0.2"
 
 [tool.poetry.scripts]
 generate-latex-example = "generate_example:main"
+
+[[tool.poetry.source]]
+name = "testpypi"
+url = "https://test.pypi.org/simple/"
+priority = "supplemental"
 
 [build-system]
 requires = ["poetry-core"]

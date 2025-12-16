@@ -1,5 +1,5 @@
 
-from src.latex_generator import generate_latex_table, generate_latex_image
+from mhs_latex_gen_danilov import generate_latex_table, generate_latex_image
 
 
 def main():
