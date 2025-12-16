@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "hw-2"
+version = "0.0.1"
+packages = [{include = "src"}]
+
+[tool.poetry.dependencies]
+python = ">=3.8"
+
+[tool.poetry.scripts]
+generate-latex-table = "generate_example:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
