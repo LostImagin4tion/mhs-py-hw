@@ -1,0 +1,25 @@
+poetry run python task_4_3.py
+
+[17:50:26] Pipeline started. Type messages (or 'q' to quit):
+
+hello world !
+[17:50:31][LOG] Main: sent 'hello world !' to A
+[17:50:31][LOG] Process A: 'hello world !' -> 'hello world !'
+[17:50:36][LOG] Process A: sent to B
+[17:50:36][LOG] Process B: 'hello world !' -> rot13 -> 'uryyb jbeyq !'
+[17:50:36][LOG] Main: received 'uryyb jbeyq !'
+pupupupupu
+[17:50:43][LOG] Main: sent 'pupupupupu' to A
+[17:50:43][LOG] Process A: 'pupupupupu' -> 'pupupupupu'
+[17:50:48][LOG] Process A: sent to B
+[17:50:48][LOG] Process B: 'pupupupupu' -> rot13 -> 'chchchchch'
+[17:50:48][LOG] Main: received 'chchchchch'
+Rust pobeda 42
+[17:50:52][LOG] Main: sent 'Rust pobeda 42' to A
+[17:50:52][LOG] Process A: 'Rust pobeda 42' -> 'rust pobeda 42'
+[17:50:57][LOG] Process A: sent to B
+[17:50:57][LOG] Process B: 'rust pobeda 42' -> rot13 -> 'ehfg cborqn 42'
+[17:50:57][LOG] Main: received 'ehfg cborqn 42'
+q
+[17:51:00][LOG] Graceful shutdown...
+[17:51:00] Finished.
