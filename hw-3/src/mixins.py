@@ -67,3 +67,19 @@ class PropertyMixin:
     @property
     def cols(self) -> int:
         return self._cols
+
+
+class HashMixin:
+    _data: List[List[Number]]
+    
+    def __hash__(self) -> int:
+        """
+        Compute hash as sum of all matrix elements modulo 42. Because 42 is the answer.
+        """
+        total = 0
+
+        for row in self._data:
+            for elem in row:
+                total += int(elem)
+        
+        return total % 42

@@ -1,0 +1,6 @@
+hash(A) = 3
+hash(B) = 3
+hash(C) = 3
+hash(D) = 3
+
+Collision: hash(A) == hash(C) = 3
