@@ -1,0 +1,11 @@
+[tool.poetry]
+name = "hw-4"
+version = "0.0.1"
+packages = [{include = "src"}]
+
+[tool.poetry.dependencies]
+python = ">=3.11"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

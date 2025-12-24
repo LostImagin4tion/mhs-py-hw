@@ -1,0 +1,5 @@
+n=420000, count=10
+
+Synchronous:     21.282 sec
+Threading:       20.628 sec
+Multiprocessing: 3.213 sec
