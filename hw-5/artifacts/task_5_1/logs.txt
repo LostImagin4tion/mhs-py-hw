@@ -1,0 +1,11 @@
+Downloaded image successfully: artifacts/task_5_1/image_0001.jpg
+Downloaded image successfully: artifacts/task_5_1/image_0000.jpg
+Downloaded image successfully: artifacts/task_5_1/image_0003.jpg
+Downloaded image successfully: artifacts/task_5_1/image_0002.jpg
+Downloaded image successfully: artifacts/task_5_1/image_0004.jpg
+Downloaded image successfully: artifacts/task_5_1/image_0009.jpg
+Downloaded image successfully: artifacts/task_5_1/image_0007.jpg
+Downloaded image successfully: artifacts/task_5_1/image_0005.jpg
+Downloaded image successfully: artifacts/task_5_1/image_0008.jpg
+Downloaded image successfully: artifacts/task_5_1/image_0006.jpg
+Successfully downloaded 10/10 images to artifacts/task_5_1

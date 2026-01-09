@@ -24,8 +24,8 @@ async def download_image(
                 if response.status == 200:
                     content = await response.read()
 
-                    async with aiofiles.open(output_path, "wb") as f:
-                        await f.write(content)
+                    async with aiofiles.open(output_path, "wb") as file:
+                        await file.write(content)
                     
                     click.echo(f"Downloaded image successfully: {output_path}")
                     return str(output_path)
@@ -47,7 +47,7 @@ async def download_images(
     output_path = Path(output_dir)
     output_path.mkdir(parents=True, exist_ok=True)
 
-    semaphore = asyncio.Semaphore(5)
+    semaphore = asyncio.Semaphore(count)
 
     async with aiohttp.ClientSession() as session:
         tasks = [
@@ -74,7 +74,7 @@ async def download_images(
     "-o",
     "--output",
     type=click.Path(),
-    default="hw-5/artifacts/task_5_1",
+    default="artifacts/task_5_1",
 )
 def main(count: int, output: str) -> None:
     asyncio.run(
